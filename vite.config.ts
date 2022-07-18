@@ -2,7 +2,7 @@
  * @Description: vite.config.ts
  * @Author: Xi Youwei
  * @Date: 2022-05-11 15:18:24
- * @LastEditTime: 2022-06-10 15:12:50
+ * @LastEditTime: 2022-06-13 16:16:38
  * @LastEditors: Xi Youwei
  */
 import * as path from 'path';
@@ -33,14 +33,14 @@ export default defineConfig({
       "@utils": path.resolve(__dirname, "src/utils")
     }
   },
-  // css:{
-  //   preprocessorOptions: {
-  //     scss: {
-  //         /* .scss全局预定义变量，引入多个文件 以;(分号分割)*/
-  //         additionalData: `@import "./src/styles/index.scss";`,
-  //     },
-  //   },
-  // },
+  css:{
+    preprocessorOptions: {
+      scss: {
+          /* .scss全局预定义变量，引入多个文件 以;(分号分割)*/
+          // additionalData: `@import "./src/styles/variables.scss";@import "./src/styles/mixin.scss";`
+      }
+    }
+  },
   plugins: [
     vue(),
     // Icons({ /* options */ }),
